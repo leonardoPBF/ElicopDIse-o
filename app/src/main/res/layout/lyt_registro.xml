@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.act_registro"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="158dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="102dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="103dp"
+        android:layout_marginBottom="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/bienvenido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/elicop" />
+
+    <TextView
+        android:id="@+id/bienvenido"
+        android:layout_width="325dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="43dp"
+        android:text="Registro ELICOP"
+        android:textAlignment="center"
+        android:textColor="#371600"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:transitionName="textTrans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="328dp"
+        android:layout_height="360dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="34dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bienvenido">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtUsuario"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="12dp"
+            android:hint="Usuario">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtUser"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:fontFamily="sans-serif"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="12dp"
+            android:hint="Correo electronico">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtEmailUser"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:fontFamily="sans-serif"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtContraseña"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="12dp"
+            android:hint="Contraseña"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtContra"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtContraseña2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="12dp"
+            android:hint="Confirmar Contraseña"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtContra2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="165dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="123dp"
+        android:layout_marginBottom="21dp"
+        android:backgroundTint="#F3430B"
+        android:onClick="registrar"
+        android:text="Crear cuenta"
+        android:theme="@style/Widget.AppCompat.DrawerArrowToggle"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="159dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="29dp"
+        android:onClick="IniciarSesion"
+        android:text="Iniciar sesion"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
